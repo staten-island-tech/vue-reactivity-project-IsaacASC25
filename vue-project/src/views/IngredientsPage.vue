@@ -3,13 +3,14 @@
       <p class = "Ramen"></p>
       <p class = "Ramen-toppings"></p>
     </div>
+    <h1>Ramen</h1>
+    <li v-for="RamenItems in RamenItems" :key ="ramen.name">{{ ramen.name }}</li>
 </template>
 
 <script setup>
 import { ref } from 'vue'
-import RamenBowl from './RamenBowl.vue';
 let price = 0
-const ramenItems = ref([
+const RamenItems = ref([
   { name: 'Noodles', image: '' },
   { name: 'Broth', image: '' },
   { name: 'Chashu (Pork)', image: '' },
@@ -23,6 +24,13 @@ const ramenItems = ref([
   { name: 'Sesame Seeds', image: '' },
   { name: 'Chili Oil', image: '' },
 ])
+
+defineProps ({
+  RamenItems: {
+    type: Object,
+    requires: true
+  }
+})
 
 </script>
 
