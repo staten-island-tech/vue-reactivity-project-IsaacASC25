@@ -1,14 +1,13 @@
 <template>
-    <div class = "containers">
-      <p class = "Ramen"></p>
-      <p class = "Ramen-toppings"></p>
-    </div>
+    <div>
     <h1>Ramen</h1>
-    <li v-for="RamenItems in RamenItems" :key ="ramen.name">{{ ramen.name }}</li>
+    <IngredientsCard v-for="RamenItems in RamenItems" :key ="RamenItems.name"></IngredientCard>
+  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import IngredientsCard from '@/components/IngredientsCard.vue'
 let price = 0
 const RamenItems = ref([
   { name: 'Noodles', image: '' },
@@ -36,10 +35,7 @@ defineProps ({
 
 <style scoped>
 .Ramen {
-position: relative
+position: relative;
 }
 
-.Ramen-toppings {
-position: absolute
-}
 </style>
