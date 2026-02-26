@@ -1,41 +1,33 @@
 <template>
     <div>
     <h1>Ramen</h1>
-    <IngredientsCard v-for="RamenItems in RamenItems" :key ="RamenItems.name"></IngredientCard>
+    <IngredientsCard v-for="RamenItem in RamenItems" :key ="RamenItems.name" :RamenItem = "RamenItem"></IngredientsCard>
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue'
 import IngredientsCard from '@/components/IngredientsCard.vue'
-let price = 0
 const RamenItems = ref([
-  { name: 'Noodles', image: '' },
-  { name: 'Broth', image: '' },
-  { name: 'Chashu (Pork)', image: '' },
-  { name: 'Soft-Boiled Egg', image: '' },
-  { name: 'Green Onions', image: '' },
-  { name: 'Nori (Seaweed)', image: '' },
-  { name: 'Bamboo Shoots (Menma)', image: '' },
+  { name: 'Broth', image: '/Base.png' },
+  { name: 'Chashu (Pork)', image: '/Chashu.png' },
+  { name: 'Soft-Boiled Egg', image: '/Tomago.png' },
+  { name: 'Green Onions', image: '/Greens.png' },
+  { name: 'Nori (Seaweed)', image: '/Nori.png' },
+  { name: 'Bamboo Shoots (Menma)', image: '/Bambuu.png' },
   { name: 'Corn', image: '' },
-  { name: 'Narutomaki (Fish Cake)', image: '' },
+  { name: 'Narutomaki (Fish Cake)', image: '/Naruto.png' },
   { name: 'Bean Sprouts', image: '' },
   { name: 'Sesame Seeds', image: '' },
   { name: 'Chili Oil', image: '' },
 ])
 
-defineProps ({
-  RamenItems: {
-    type: Object,
-    requires: true
-  }
-})
-
 </script>
 
 <style scoped>
-.Ramen {
-position: relative;
+div{
+  display: flex;
+  flex-wrap: wrap;
+flex-direction: row;
 }
-
 </style>

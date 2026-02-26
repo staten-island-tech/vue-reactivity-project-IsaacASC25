@@ -1,11 +1,13 @@
 <template>
     <div>
+    <h2>{{RamenItem.name}}</h2>
+    <img :src="RamenItem.image" alt="Damian"/>
     </div>
 </template>
 
 <script setup>
 defineProps ({
-  RamenItems: {
+  RamenItem: {
     type: Object,
     requires: true
   }
@@ -13,8 +15,9 @@ defineProps ({
 </script>
 
 <style scoped>
-.div {
-position: absolute;
-border: solid;
+div {
+  display: flex;
+  width:100%;
+flex-direction: row;
 }
 </style>
