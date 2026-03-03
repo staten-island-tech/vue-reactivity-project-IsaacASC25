@@ -1,6 +1,7 @@
 <template>
-    <div>
+    <div class = "container">
     <h1>Ramen</h1>
+  </br>
     <IngredientsCard v-for="RamenItem in RamenItems" :key ="RamenItems.name" :RamenItem = "RamenItem"></IngredientsCard>
   </div>
 </template>
@@ -15,16 +16,20 @@ const RamenItems = ref([
   { name: 'Green Onions', image: '/Greens.png' },
   { name: 'Nori (Seaweed)', image: '/Nori.png' },
   { name: 'Bamboo Shoots (Menma)', image: '/Bambuu.png' },
-  { name: 'Corn', image: '' },
+  { name: 'Corn', image: '/Corn.png' },
   { name: 'Narutomaki (Fish Cake)', image: '/Naruto.png' },
-  { name: 'Bean Sprouts', image: '' },
-  { name: 'Sesame Seeds', image: '' },
-  { name: 'Chili Oil', image: '' },
+  { name: 'Jalapenos', image: '/Jalapenos.png' },
+  { name: 'Sesame Seeds', image: '/SesameSeeds.png' },
 ])
 
 </script>
 
 <style scoped>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 div{
   display: flex;
   flex-wrap: wrap;
