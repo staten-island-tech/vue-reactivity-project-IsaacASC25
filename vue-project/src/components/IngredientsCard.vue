@@ -1,8 +1,10 @@
 <template>
+  <header>
+      <h2>{{RamenItem.name}}</h2> 
     <div>
-    <h2>{{RamenItem.name}} <br></h2> 
     <img :src="RamenItem.image" alt="Damian"/>
     </div>
+</header>
 </template>
 
 <script setup>
@@ -15,16 +17,22 @@ defineProps ({
 </script>
 
 <style scoped>
+header{
+  margin: 50px;
+  align-items: center;
+}
 div {
   display: flex;
 flex-direction: row;
 align-items: center;
-border: 5px solid black;
-position: relative
+position: relative;
+font-size: 20px;
 }
 
 img{
   width: 67px;
   height: 67px;
-}
+  display:grid;
+  place-items: center;
+  }
 </style>
