@@ -35,7 +35,6 @@ font-size: 50px;
 }
 div{
   display: flex;
-  flex-wrap: wrap;
-flex-direction: row;
+  left:0;
 }
 </style>
