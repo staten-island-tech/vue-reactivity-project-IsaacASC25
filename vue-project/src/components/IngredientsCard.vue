@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header class="card">
       <h2>{{RamenItem.name}}</h2> 
     <div>
     <img :src="RamenItem.image" alt="Damian"/>
@@ -22,22 +22,39 @@ defineEmits(['add', 'remove'])
 </script>
 
 <style scoped>
-header{
-  margin: 50px;
-  align-items: center;
-}
-div {
-  display: flex;
-flex-direction: row;
-align-items: center;
-position: relative;
-font-size: 20px;
+.card {
+  background-color: #2a0a00;
+  border: 1px solid #8b0000;
+  border-radius: 12px;
+  padding: 20px;
+  width: 130px;
+  text-align: center;
+  color: #f5e6d3;
+  font-family: 'Georgia', serif;
 }
 
-img{
+h2 {
+  font-size: 14px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  color: #f5e6d3;
+}
+
+img {
   width: 67px;
   height: 67px;
-  display:grid;
-  place-items: center;
-  }
+  margin-bottom: 10px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  padding: 6px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: 'Georgia', serif;
+  font-size: 12px;
+}
 </style>
