@@ -4,6 +4,8 @@
     <div>
     <img :src="RamenItem.image" alt="Damian"/>
     </div>
+    <button @click="$emit('add', RamenItem)">Add to Bowl</button>
+    <button @click="$emit('remove', RamenItem)">Remove Topping</button>
 </header>
 </template>
 
@@ -14,6 +16,9 @@ defineProps ({
     requires: true
   }
 })
+
+defineEmits(['add', 'remove'])
+
 </script>
 
 <style scoped>
