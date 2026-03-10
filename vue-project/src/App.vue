@@ -1,10 +1,11 @@
 <template>
   <div class="app">
-    <RouterView/>
+    <IngredientsPage/>
   </div>
 </template>
 
 <script setup>
+import IngredientsPage from '@/views/IngredientsPage.vue'
 </script>
 
 <style>
