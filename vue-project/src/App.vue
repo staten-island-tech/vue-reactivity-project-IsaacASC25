@@ -1,13 +1,21 @@
 <template>
-  <div>
-<RouterView/>
+  <div class="app">
+    <RouterView/>
   </div>
 </template>
 
 <script setup>
-
 </script>
 
-<style scoped>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
 
+.app {
+  padding-top: 35px;
+  background-color: #1a0a00;
+  min-height: 100vh;
+}
 </style>

@@ -1,5 +1,4 @@
 <template>
-  <div class="Background">
   <h1 class="title">Ramen Maker</h1>
   <div class="bowl">
   <img class="base" src="/Base.png" alt="bowl"/>
@@ -8,7 +7,6 @@
   <p class="total"> Total: ${{ RamenItems.filter(i => i.selected).reduce((sum, i) => sum + i.price, 0).toFixed(2) }}</p>
   <div class="container">
     <IngredientsCard v-for="RamenItem in RamenItems" :key="RamenItem.name" :RamenItem="RamenItem" @add="addItem" @remove="removeItem"/>
-  </div>
   </div>
 </template>
 
@@ -39,11 +37,6 @@ function removeItem(item) {
 </script>
 
 <style scoped>
-.Background {
-  background-color: #1a0a00;
-  min-height: 100vh;
-  width: 100%;
-}
 
 body {
   background-color: #1a0a00;
@@ -51,7 +44,7 @@ body {
 
 .title {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   color: #8b0000;
   letter-spacing: 8px;
   text-transform: uppercase;
@@ -60,14 +53,14 @@ body {
 
 .bowl {
   position: relative;
-  width: 200px;
-  height: 200px;
-  margin: 0 auto 20px auto;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto 10px auto;
 }
 
 .base {
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
 }
 
 .topping {
@@ -75,8 +68,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
 }
 
 .total {
@@ -84,7 +77,7 @@ body {
   color: #8b0000;
   font-size: 20px;
   letter-spacing: 2px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 .container {
